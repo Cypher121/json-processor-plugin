@@ -1,3 +1,3 @@
 
-rootProject.name = "json-filters-plugin"
+rootProject.name = "json-processor-plugin"
 

@@ -1,13 +1,12 @@
-@file:JvmName("JsonFilterConfigurationExtensions")
-
-package coffee.cypher.json_filters
+package coffee.cypher.json_processor
 
 import blue.endless.jankson.JsonElement
 import blue.endless.jankson.JsonGrammar
 import groovy.lang.Closure
-import org.gradle.api.file.CopySpec
+import groovy.lang.DelegatesTo
+import org.gradle.api.file.ContentFilterable
 
-class JsonFilterConfiguration(private val spec: CopySpec) {
+class JsonFilterConfiguration(private val spec: ContentFilterable) {
     var outputFormat = JsonGrammar.STRICT
     private val pipeline = mutableListOf<(JsonElement) -> JsonElement>()
 
@@ -29,5 +28,3 @@ class JsonFilterConfiguration(private val spec: CopySpec) {
 fun JsonFilterConfiguration.outputJson5() {
     outputFormat = JsonGrammar.JSON5
 }
-
-fun JsonFilterConfiguration.pipeline(closure: Closure<*>) = closureCall(this::pipeline, closure)
