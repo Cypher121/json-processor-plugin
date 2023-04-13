@@ -2,8 +2,6 @@ package coffee.cypher.json_processor
 
 import blue.endless.jankson.JsonElement
 import blue.endless.jankson.JsonGrammar
-import groovy.lang.Closure
-import groovy.lang.DelegatesTo
 import org.gradle.api.file.ContentFilterable
 
 class JsonFilterConfiguration(private val spec: ContentFilterable) {
