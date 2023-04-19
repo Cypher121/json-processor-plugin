@@ -1,6 +1,8 @@
 # Json Processor Gradle Plugin
 Gradle plugin allowing JSON/JSON5 processing as part of Copy and ProcessResources tasks/actions
 
+[![Download](https://img.shields.io/gradle-plugin-portal/v/coffee.cypher.json-processor)](https://plugins.gradle.org/plugin/coffee.cypher.json-processor)
+
 # Features
 
 * JSON5 input and output support via [Jankson](https://github.com/falkreon/Jankson/)
